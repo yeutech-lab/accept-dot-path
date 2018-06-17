@@ -26,6 +26,7 @@ build:
     paths:
       - .
   only:
+    - next
     - tags
     - dev
     - master
@@ -33,7 +34,7 @@ build:
     - docker
 
 # Job: Test
-test:
+.test:
   stage: test
   coverage: '/All files[^|]*\|\s*[\d.]*\s*\|\s*[\d.]*\s*\|\s*[\d.]*\s*\|\s*([\d.]*)\s*\|\s*/'
   script:
@@ -81,6 +82,7 @@ release:
   dependencies:
     - build
   only:
+    - next
     - master
   tags:
     - docker

@@ -1,3 +1,42 @@
+# 1.0.0 (2018-06-17)
+
+
+### Bug Fixes
+
+* **build:** ci ([0cd0ae6](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/0cd0ae6))
+* **build:** gl-to-gh added verify.sh ([e321f69](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/e321f69))
+* **build:** gl-to-gh added verify.sh ([f3f9678](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/f3f9678))
+* **build:** gl-to-gh added verify.sh ([fec81bb](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/fec81bb))
+* **ci:** test ([f442ccb](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/f442ccb))
+* **ci:** test ([e2c0225](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/e2c0225))
+* **deploy:** initally deploy to protected ([59b7a2c](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/59b7a2c))
+* **publishing:** set to public ([83ae081](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/83ae081))
+
+
+### Features
+
+* **doc:** added accept-dot-path ([daa06a6](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/daa06a6))
+* **doc:** added accept-dot-path ([20e48d7](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/20e48d7))
+
+# 1.0.0 (2018-06-17)
+
+
+### Bug Fixes
+
+* **build:** ci ([0cd0ae6](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/0cd0ae6))
+* **build:** gl-to-gh added verify.sh ([e321f69](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/e321f69))
+* **build:** gl-to-gh added verify.sh ([f3f9678](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/f3f9678))
+* **build:** gl-to-gh added verify.sh ([fec81bb](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/fec81bb))
+* **ci:** test ([e2c0225](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/e2c0225))
+* **deploy:** initally deploy to protected ([59b7a2c](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/59b7a2c))
+* **publishing:** set to public ([83ae081](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/83ae081))
+
+
+### Features
+
+* **doc:** added accept-dot-path ([daa06a6](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/daa06a6))
+* **doc:** added accept-dot-path ([20e48d7](https://module.kopaxgroup.com/dev-tools/accept-dot-path/commit/20e48d7))
+
 <a name="1.0.40"></a>
 ## [1.0.40](https://module.kopaxgroup.com/dev-tools/rollup-umd/compare/v1.0.39...v1.0.40) (2018-06-14)
 
