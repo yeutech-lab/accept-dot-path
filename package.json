@@ -224,7 +224,7 @@
   },
   "private": false,
   "release": {
-    "branch": "master",
+    "branch": "next",
     "success": false,
     "fail": false,
     "npmPublish": false,
@@ -235,6 +235,10 @@
       {
         "path": "@semantic-release/gitlab",
         "gitlabUrl": "https://module.kopaxgroup.com"
+      },
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "./verify.sh",
       }
     ],
     "prepare": [
