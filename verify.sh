@@ -2,7 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-. $DIR/keys
+. $DIR/keys.sh
 
 env
 echo $GL_TOKEN
