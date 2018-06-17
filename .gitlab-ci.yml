@@ -2,6 +2,7 @@ image: kopaxgroup/node10-jdk8-flyway4-sonarscanner2-docker17-debian
 
 before_script:
   - npx -p rollup-umd-scripts scripts-ci before-script
+  - node verify.js
 
 stages:
   - build
@@ -26,7 +27,6 @@ build:
     paths:
       - .
   only:
-    - next
     - tags
     - dev
     - master
@@ -82,7 +82,6 @@ release:
   dependencies:
     - build
   only:
-    - next
     - master
   tags:
     - docker
