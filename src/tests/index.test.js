@@ -1,39 +1,35 @@
 /**
- * Testing example
+ * Testing dot path
  */
-import DemoClass from '../index';
+import path from 'path';
+import acceptDotPath from '../index';
 
-describe('DemoClass', () => {
-  let demoClass;
-  beforeEach(() => {
-    demoClass = new DemoClass();
+describe('acceptDotPath', () => {
+  it('should accept unprefixed path', () => {
+    expect(acceptDotPath('foobar')).toBe(path.join(process.cwd(), 'foobar'));
   });
-  it('should be the DemoClass', () => {
-    expect(demoClass instanceof DemoClass).toBe(true);
+  it('should accept unprefixed path with custom cwd', () => {
+    expect(acceptDotPath('foobar', '/home/user')).toBe(path.join('/home/user', 'foobar'));
   });
-  it('should be the static test', () => {
-    expect(demoClass.getTestStatic()).toBe('This is a static test');
+
+  it('should accept relative path', () => {
+    expect(acceptDotPath('/foobar')).toBe('/foobar');
   });
-  it('should be the test attribute', () => {
-    expect(demoClass.getTestAttribute()).toBe('This is a test attribute');
+  it('should accept relative path with custom cwd', () => {
+    expect(acceptDotPath('/foobar', '/home/user')).toBe('/foobar');
   });
-  it('should set the test attribute', () => {
-    demoClass.setTestAttribute('test');
-    expect(demoClass.getTestAttribute()).toBe('test');
+
+  it('should accept dot path', () => {
+    expect(acceptDotPath('./foobar')).toBe(path.join(process.cwd(), 'foobar'));
   });
-  it('should include a in list', () => {
-    expect(demoClass.hasInList('a')).toBe(true);
+  it('should accept dot path with custom cwd', () => {
+    expect(acceptDotPath('./foobar', '/home/user')).toBe(path.join('/home/user', 'foobar'));
   });
-  it('should get replaced env', () => {
-    expect(demoClass.getReplacedEnv()).toBe('test');
+
+  it('should accept dot path with ..', () => {
+    expect(acceptDotPath('../foobar')).toBe(path.join(process.cwd(), '../foobar'));
   });
-  it('should get rest from spread', () => {
-    expect(demoClass.getIsSpreadActive()).toEqual(true);
-  });
-  it('should get rest from spread', () => {
-    expect(demoClass.getRest()).toEqual({
-      isTestLiving: true,
-      list: ['a', 'b'],
-    });
+  it('should accept dot path with .. and custom cwd', () => {
+    expect(acceptDotPath('../foobar', '/home/user')).toBe(path.join('/home/user', '../foobar'));
   });
 });

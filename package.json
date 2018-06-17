@@ -1,13 +1,18 @@
 {
   "name": "@yeutech/accept-dot-path",
   "version": "0.0.0-development",
-  "description": "accept-dot-path",
+  "description": "accept-dot-path is a simple function that accept all path starting with dot(s).",
   "main": "lib/index.js",
+  "jsnext:main": "dist/accept-dot-path.esm.js",
+  "module": "dist/accept-dot-path.esm.js",
   "homepage": "https://dev-tools.yeutech.com/accept-dot-path",
   "browserslist": [
     "IE >= 9",
     "last 2 versions"
   ],
+  "engines": {
+    "node": ">=8"
+  },
   "author": "Dimitri Kopriwa <dimitri.kopriwa@yeutech.vn> (https://github.com/kopax)",
   "scripts": {
     "prebuild": "npm run build:clean",
@@ -71,6 +76,14 @@
         2,
         "always-multiline"
       ],
+      "import/extensions": [
+        "error",
+        "always",
+        {
+          "js": "never",
+          "mjs": "never"
+        }
+      ],
       "import/imports-first": 0,
       "import/newline-after-import": 0,
       "import/no-dynamic-require": 0,
@@ -93,6 +106,16 @@
       "prefer-template": 2,
       "class-methods-use-this": 0,
       "require-yield": 0
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".mjs"
+          ]
+        }
+      }
     }
   },
   "jest": {
@@ -138,7 +161,7 @@
     "@semantic-release/git": "^5.0.0",
     "@semantic-release/gitlab": "^2.1.4",
     "@semantic-release/npm": "^3.2.5",
-    "@yeutech/rollup-documentation": "^2.1.5",
+    "@yeutech/rollup-documentation": "^2.3.4",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.1",
@@ -184,7 +207,7 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-plugin-visualizer": "^0.5.0",
-    "rollup-umd-scripts": "^0.12.6",
+    "rollup-umd-scripts": "^0.12.8",
     "rollup-watch": "^4.3.1",
     "semantic-release": "^15.5.0",
     "sinon": "^2.3.2",
@@ -197,8 +220,9 @@
   "peerDependencies": {},
   "publishConfig": {
     "tag": "latest",
-    "registry": "https://npm.kopaxgroup.com"
+    "registry": "https://registry.npmjs.org"
   },
+  "private": false,
   "release": {
     "branch": "master",
     "success": false,

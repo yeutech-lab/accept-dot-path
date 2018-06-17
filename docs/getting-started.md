@@ -1,24 +1,19 @@
-Like every [rollup-umd](dev-tools.yeutech.com/rollup-umd) project $PACKAGE_NAME provide two distribution:
+It accept UNIX path.
+
+We originally made this just for NodeJS ClI so user can pass path of any kinds to our apps.
+
+**Parameters**
+
+- `path` *(String)*: the path to convert
+- `cwd` *(String) (optional)*: a cwd to be used, if none is specified, it will use `process.cwd()`.
  
-1. `dist` folder with all the javascript bundled in one file. You will have a UMD and ES5 file.
-1. `lib` folder that just contain the ES6 transpiled in ES5.
+```jsx harmony
+const acceptDotPath = require('@yeutech/accept-dot-path');
 
-Whenever you use $PACKAGE_NAME, you need to import the one appropriate to your environment (node or browser).
-
-If you are building a distributed package in a node environment, you want to prevent bundling the whole library you are importing (if made with rollup-umd).
-
-To do so, always import from `lib`.
- 
-This is correct:
-
-```js static
-import myLib from '$PACKAGE_NAME/lib';
+<ul>
+  <li><code>acceptDotPath('./.ssh', '/home/user')</code> => {acceptDotPath('./.ssh', '/home/user')}</li>
+    <li><code>acceptDotPath('../.ssh', '/home/user')</code> => {acceptDotPath('../.ssh', '/home/user')}</li>
+  <li><code>acceptDotPath('/ssh', '/home/user')</code> => {acceptDotPath('/ssh', '/home/user')}</li>
+  <li><code>acceptDotPath('ssh', '/home/user')</code> => {acceptDotPath('ssh', '/home/user')}</li>
+</ul>
 ```
-
-This is wrong:
-
-```js static
-import myLib from '$PACKAGE_NAME';
-```
-
-If you are a developer, you want to read more [here](http://dev-tools.yeutech.com/rollup-umd/#distribution).

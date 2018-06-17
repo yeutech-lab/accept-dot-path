@@ -1,45 +1,9 @@
-/**
- * Code your first module here
- */
+import path from 'path';
 
-export default class DemoClass {
-  static testStatic = 'This is a static test';
-
-  testAttribute = 'This is a test attribute';
-
-  state = {
-    list: ['a', 'b'],
-    isSpreadActive: true,
-    isTestLiving: true,
-  };
-
-  hasInList(value) {
-    return this.state.list.includes(value);
+export default function acceptDotPath(p, cwd) {
+  if (p[0] === '/') {
+    return p;
   }
-
-  getReplacedEnv() {
-    return process.env.NODE_ENV;
-  }
-
-  getIsSpreadActive() {
-    const { isSpreadActive, ...rest } = this.state; // eslint-disable-line no-unused-vars
-    return isSpreadActive;
-  }
-
-  getRest() {
-    const { isSpreadActive, ...rest } = this.state;
-    return rest;
-  }
-
-  getTestStatic() {
-    return DemoClass.testStatic;
-  }
-
-  getTestAttribute() {
-    return this.testAttribute;
-  }
-
-  setTestAttribute(testAttribute) {
-    this.testAttribute = testAttribute;
-  }
+  const c = cwd || process.cwd();
+  return p[1] === '/' ? path.join(c, p.slice(2)) : path.join(c, p);
 }
