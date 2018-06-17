@@ -4,7 +4,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 . $DIR/keys.sh
 
-env
+echo $NPM_RESERVED_SCOPES
 echo $GL_TOKEN
 # if reserved, public release will break if package.json contains any of thoose
 NPM_RESERVED_SCOPES=@yeutech,@kopaxgroup
