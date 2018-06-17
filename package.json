@@ -264,7 +264,7 @@
       "@semantic-release/npm",
       {
         "path": "@semantic-release/exec",
-        "cmd": "echo ${nextRelease.version} > ~/release_version"
+        "cmd": "./release.sh ${nextRelease.version}"
       },
       {
         "path": "@semantic-release/gitlab",

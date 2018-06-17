@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-echo $GL_TOKEN
+
+echo $1 > ~/release_version
 
 state=$(npx rollup-umd-scripts publish status)
 echo $state
-
-node testing/gitlab-to-github
-echo "Done verifying"
-# exit 1
+echo "Done release"
