@@ -254,6 +254,10 @@
           "README.md",
           "LICENSE.md"
         ]
+      },
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "./prepare.sh"
       }
     ],
     "publish": [
