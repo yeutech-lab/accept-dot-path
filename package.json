@@ -238,7 +238,7 @@
       },
       {
         "path": "@semantic-release/exec",
-        "cmd": "./verify.sh",
+        "cmd": "./verify.sh"
       }
     ],
     "prepare": [
