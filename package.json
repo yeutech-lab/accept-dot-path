@@ -220,7 +220,7 @@
   "peerDependencies": {},
   "publishConfig": {
     "tag": "latest",
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://npm.kopaxgroup.com"
   },
   "private": false,
   "release": {
