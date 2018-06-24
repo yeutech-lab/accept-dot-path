@@ -163,7 +163,7 @@
     "@semantic-release/gitlab": "^2.1.4",
     "@semantic-release/npm": "^3.2.5",
     "@yeutech-lab/rollup-umd-documentation": "^2.3.8",
-    "@yeutech/rollup-umd-scripts": "^0.14.6",
+    "@yeutech/rollup-umd-scripts": "^0.14.7",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.1",
