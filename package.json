@@ -243,10 +243,6 @@
       }
     ],
     "prepare": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx -p @yeutech/rollup-umd-scripts scripts-ci transitive prepare"
-      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       {
@@ -269,7 +265,7 @@
       },
       {
         "path": "@semantic-release/exec",
-        "cmd": "npx -p @yeutech/rollup-umd-scripts scripts-ci transitive publish ${nextRelease.version}"
+        "cmd": "npx -p @yeutech/rollup-umd-scripts scripts-ci transitive prepare && npx -p @yeutech/rollup-umd-scripts scripts-ci transitive publish ${nextRelease.version}"
       }
     ]
   },
