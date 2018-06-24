@@ -248,10 +248,6 @@
         "cmd": "npx -p rollup-umd-scripts scripts-ci transitive prepare"
       },
       "@semantic-release/changelog",
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "./prepare.sh"
-      },
       "@semantic-release/npm",
       {
         "path": "@semantic-release/git",
