@@ -10,6 +10,4 @@ npx rollup-umd-scripts doc variable \
   CI_PROJECT_URL=${CI_PROJECT_URL} \
   CI_PROJECT_NAMESPACE=${CI_PROJECT_NAMESPACE} \
   CI_PROJECT_NAME=${CI_PROJECT_NAME} \
-  CLI_HELP="$(npx rollup-umd-scripts help)" \
-  DECLINATION_LIST="$(npx rollup-umd-scripts declination list --with-link)" \
   IMG_SHIELD_PUBLISHING=$(npx rollup-umd-scripts publish status --badge)

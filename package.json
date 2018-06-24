@@ -49,7 +49,7 @@
     "dot",
     "path"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb-base",
@@ -105,7 +105,8 @@
       "no-use-before-define": 0,
       "prefer-template": 2,
       "class-methods-use-this": 0,
-      "require-yield": 0
+      "require-yield": 0,
+      "no-await-in-loop": 0
     },
     "settings": {
       "import/resolver": {
@@ -161,8 +162,8 @@
     "@semantic-release/git": "^5.0.0",
     "@semantic-release/gitlab": "^2.1.4",
     "@semantic-release/npm": "^3.2.5",
-    "@yeutech/gitlab-to-github": "^1.2.0",
-    "@yeutech/rollup-documentation": "^2.3.4",
+    "@yeutech-lab/rollup-umd-documentation": "^2.3.8",
+    "@yeutech/rollup-umd-scripts": "^0.14.4",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.1",
@@ -208,9 +209,8 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-plugin-visualizer": "^0.5.0",
-    "rollup-umd-scripts": "^0.12.8",
     "rollup-watch": "^4.3.1",
-    "semantic-release": "^15.5.0",
+    "semantic-release": "^15.5.2",
     "sinon": "^2.3.2",
     "toctoc": "^0.3.0",
     "webpack": "^4.12.0"
@@ -230,20 +230,28 @@
     "fail": false,
     "npmPublish": false,
     "verifyConditions": [
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx -p rollup-umd-scripts scripts-ci transitive verify"
+      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/git",
       {
         "path": "@semantic-release/gitlab",
         "gitlabUrl": "https://module.kopaxgroup.com"
-      },
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "./verify.sh"
       }
     ],
     "prepare": [
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx -p rollup-umd-scripts scripts-ci transitive prepare"
+      },
       "@semantic-release/changelog",
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "./prepare.sh"
+      },
       "@semantic-release/npm",
       {
         "path": "@semantic-release/git",
@@ -255,21 +263,17 @@
           "README.md",
           "LICENSE.md"
         ]
-      },
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "./prepare.sh"
       }
     ],
     "publish": [
       "@semantic-release/npm",
       {
-        "path": "@semantic-release/exec",
-        "cmd": "./release.sh ${nextRelease.version}"
-      },
-      {
         "path": "@semantic-release/gitlab",
         "gitlabUrl": "https://module.kopaxgroup.com"
+      },
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx -p rollup-umd-scripts scripts-ci transitive publish ${nextRelease.version}"
       }
     ]
   },
@@ -279,5 +283,23 @@
     }
   },
   "declinationId": "",
-  "contributor": []
+  "transitive": {
+    "name": "accept-dot-path",
+    "scope": "yeutech-lab",
+    "scopedName": "@yeutech-lab/accept-dot-path",
+    "jsnext:main": "dist/accept-dot-path.esm.js",
+    "module": "dist/accept-dot-path.esm.js",
+    "homepage": "https://yeutech-lab.github.io/accept-dot-path",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/yeutech-lab/accept-dot-path.git"
+    },
+    "bugs": {
+      "url": "https://github.com/yeutech-lab/accept-dot-path/issues"
+    },
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org"
+    }
+  }
 }
