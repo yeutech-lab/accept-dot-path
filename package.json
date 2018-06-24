@@ -225,7 +225,7 @@
   },
   "private": false,
   "release": {
-    "branch": "next",
+    "branch": "master",
     "success": false,
     "fail": false,
     "npmPublish": false,
