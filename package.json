@@ -163,7 +163,7 @@
     "@semantic-release/gitlab": "^2.1.4",
     "@semantic-release/npm": "^3.2.5",
     "@yeutech-lab/rollup-umd-documentation": "^2.3.8",
-    "@yeutech/rollup-umd-scripts": "^0.14.4",
+    "@yeutech/rollup-umd-scripts": "^0.14.5",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.1",
@@ -220,15 +220,15 @@
   },
   "peerDependencies": {},
   "publishConfig": {
-    "tag": "latest",
-    "registry": "https://npm.kopaxgroup.com"
+    "registry": "https://npm.kopaxgroup.com",
+    "tag": "latest"
   },
   "private": false,
   "release": {
     "branch": "master",
     "success": false,
     "fail": false,
-    "npmPublish": false,
+    "npmPublish": true,
     "verifyConditions": [
       {
         "path": "@semantic-release/exec",
