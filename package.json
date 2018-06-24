@@ -232,7 +232,7 @@
     "verifyConditions": [
       {
         "path": "@semantic-release/exec",
-        "cmd": "npx -p rollup-umd-scripts scripts-ci transitive verify"
+        "cmd": "npx -p @yeutech/rollup-umd-scripts scripts-ci transitive verify"
       },
       "@semantic-release/changelog",
       "@semantic-release/npm",
@@ -245,7 +245,7 @@
     "prepare": [
       {
         "path": "@semantic-release/exec",
-        "cmd": "npx -p rollup-umd-scripts scripts-ci transitive prepare"
+        "cmd": "npx -p @yeutech/rollup-umd-scripts scripts-ci transitive prepare"
       },
       "@semantic-release/changelog",
       "@semantic-release/npm",
@@ -269,7 +269,7 @@
       },
       {
         "path": "@semantic-release/exec",
-        "cmd": "npx -p rollup-umd-scripts scripts-ci transitive publish ${nextRelease.version}"
+        "cmd": "npx -p @yeutech/rollup-umd-scripts scripts-ci transitive publish ${nextRelease.version}"
       }
     ]
   },
