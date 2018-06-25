@@ -20,9 +20,9 @@ Read [accept-dot-path documentation](https://yeutech-lab.github.io/accept-dot-pa
 
 ## Contributing
 
-If you want to contribute to accept-dot-path please see our [contributing and community guidelines](./CONTRIBUTING.md), they\'ll help you get set up locally and explain the whole process.
+If you want to contribute to accept-dot-path please see our [contributing and community guidelines](https://github.com/yeutech-lab/accept-dot-path/blob/master/CONTRIBUTING.md), they\'ll help you get set up locally and explain the whole process.
 
-Please also note that all repositories under the yeutech-lab organization follow our [Code of Conduct](./CODE_OF_CONDUCT.md), make sure to review and follow it.
+Please also note that all repositories under the yeutech-lab organization follow our [Code of Conduct](https://github.com/yeutech-lab/accept-dot-path/blob/master/CODE_OF_CONDUCT.md), make sure to review and follow it.
 
 ## License MIT
 
