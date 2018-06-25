@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.0...v1.0.1) (2018-06-25)
+
+
+### Bug Fixes
+
+* **release:** GitHub release https://github.com/yeutech-lab/accept-dot-path ([95cae93](https://github.com/yeutech-lab/accept-dot-path/commit/95cae93))
+
 # 1.0.0 (2018-06-25)
 
 
