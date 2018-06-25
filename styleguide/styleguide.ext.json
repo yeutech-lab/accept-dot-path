@@ -42,7 +42,7 @@
     }
   ],
   "ribbon": {
-    "url": "https://module.kopaxgroup.com/dev-tools/accept-dot-path",
-    "text": "Fork us on GitLab"
+    "url": "https://github.com/yeutech-lab/accept-dot-path",
+    "text": "Fork us on GitHub"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "name": "@yeutech/accept-dot-path",
+  "name": "@yeutech-lab/accept-dot-path",
   "version": "1.0.0",
   "description": "accept-dot-path is a simple function that accept all path starting with dot(s).",
   "main": "lib/index.js",
   "jsnext:main": "dist/accept-dot-path.esm.js",
   "module": "dist/accept-dot-path.esm.js",
-  "homepage": "https://dev-tools.yeutech.com/accept-dot-path",
+  "homepage": "https://yeutech-lab.github.io/accept-dot-path",
   "browserslist": [
     "IE >= 9",
     "last 2 versions"
@@ -38,10 +38,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://module.kopaxgroup.com/dev-tools/accept-dot-path.git"
+    "url": "https://github.com/yeutech-lab/accept-dot-path.git"
   },
   "bugs": {
-    "url": "https://module.kopaxgroup.com/dev-tools/accept-dot-path/issues"
+    "url": "https://github.com/yeutech-lab/accept-dot-path/issues"
   },
   "keywords": [
     "yeutech.vn",
@@ -160,10 +160,9 @@
     "@semantic-release/changelog": "^2.0.2",
     "@semantic-release/exec": "^2.2.4",
     "@semantic-release/git": "^5.0.0",
-    "@semantic-release/gitlab": "^2.1.4",
+    "@semantic-release/github": "^4.2.17",
     "@semantic-release/npm": "^3.2.5",
     "@yeutech-lab/rollup-umd-documentation": "^2.3.8",
-    "@yeutech/rollup-umd-scripts": "^0.14.12",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.1",
@@ -220,33 +219,21 @@
   },
   "peerDependencies": {},
   "publishConfig": {
-    "registry": "https://npm.kopaxgroup.com",
-    "tag": "latest"
+    "registry": "https://registry.npmjs.org",
+    "tag": "latest",
+    "access": "public"
   },
   "private": false,
   "release": {
     "branch": "master",
-    "success": false,
-    "fail": false,
     "npmPublish": true,
     "verifyConditions": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx -p @yeutech/rollup-umd-scripts scripts-ci transitive verify"
-      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/git",
-      {
-        "path": "@semantic-release/gitlab",
-        "gitlabUrl": "https://module.kopaxgroup.com"
-      }
+      "@semantic-release/github"
     ],
     "prepare": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx -p @yeutech/rollup-umd-scripts scripts-ci transitive prepare"
-      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       {
@@ -264,12 +251,49 @@
     "publish": [
       "@semantic-release/npm",
       {
-        "path": "@semantic-release/gitlab",
-        "gitlabUrl": "https://module.kopaxgroup.com"
-      },
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx -p @yeutech/rollup-umd-scripts scripts-ci transitive publish ${nextRelease.version}"
+        "path": "@semantic-release/github",
+        "assets": [
+          {
+            "path": "package.json"
+          },
+          {
+            "path": "LICENSE.md"
+          },
+          {
+            "path": "CHANGELOG.md"
+          },
+          {
+            "path": "README.md"
+          },
+          {
+            "path": "dist/*.esm.js",
+            "label": "ES module"
+          },
+          {
+            "path": "dist/*.esm.js.map",
+            "label": "ES module source map"
+          },
+          {
+            "path": "dist/*.min.js",
+            "label": "UMD compressed"
+          },
+          {
+            "path": "dist/*.min.js.map",
+            "label": "UMD compressed source map"
+          },
+          {
+            "path": "dist/*.cjs.min.js",
+            "label": "CJS compressed"
+          },
+          {
+            "path": "dist/*.cjs.min.js.map",
+            "label": "CJS compressed source map"
+          },
+          {
+            "path": "lib/*.js",
+            "label": "CJS folder"
+          }
+        ]
       }
     ]
   },
@@ -278,24 +302,5 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "declinationId": "",
-  "transitive": {
-    "name": "accept-dot-path",
-    "scope": "yeutech-lab",
-    "scopedName": "@yeutech-lab/accept-dot-path",
-    "jsnext:main": "dist/accept-dot-path.esm.js",
-    "module": "dist/accept-dot-path.esm.js",
-    "homepage": "https://yeutech-lab.github.io/accept-dot-path",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/yeutech-lab/accept-dot-path.git"
-    },
-    "bugs": {
-      "url": "https://github.com/yeutech-lab/accept-dot-path/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
-    }
-  }
+  "declinationId": ""
 }
