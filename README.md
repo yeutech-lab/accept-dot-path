@@ -15,9 +15,6 @@
 
 accept-dot-path is a simple function that accept all path starting with dot(s).
 
-
-https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=duplicated_lines_density
-
 ## Table of Contents
 
   - [Documentation](#documentation)
