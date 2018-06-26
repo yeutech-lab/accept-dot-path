@@ -1,3 +1,12 @@
+## [1.0.6](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.5...v1.0.6) (2018-06-26)
+
+
+### Bug Fixes
+
+* **travis:** not forcing on build tag ([ba0663d](https://github.com/yeutech-lab/accept-dot-path/commit/ba0663d))
+* **travis:** not forcing on build tag ([9027378](https://github.com/yeutech-lab/accept-dot-path/commit/9027378))
+* **travis:** not forcing on build tag ([d24fe09](https://github.com/yeutech-lab/accept-dot-path/commit/d24fe09))
+
 ## [1.0.5](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.4...v1.0.5) (2018-06-26)
 
 
