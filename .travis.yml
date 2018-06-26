@@ -22,7 +22,7 @@ before_install:
 
     # logging
     - npm --version || echo npm not installed
-    - node --version|| echo node not installed
+    - node --version || echo node not installed
     - echo "package version $PACKAGE_VERSION"
 
 stages:
@@ -55,7 +55,7 @@ jobs:
       script:
         - npm run test
         # - sonar-scanner -Dsonar.branch=${TRAVIS_BRANCH} -Dsonar.projectVersion=${SONAR_VERSION}
-        - sonar-scanner -Dsonar.projectKey=com.github.yeutech-lab.accept-dot-path -Dsonar.organization=yeutech-lab -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}
+        - sonar-scanner -Dsonar.projectKey=com.github.yeutech-lab.accept-dot-path -Dsonar.organization=yeutech-lab -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN} -Dsonar.branch=${TRAVIS_BRANCH} -Dsonar.projectVersion=${SONAR_VERSION}
 
     # Job: Release
     - stage: release
