@@ -16,6 +16,7 @@ before_install:
     # const
     - export PACKAGE_NAME=$(node -p "require('./package.json').name")
     - export PACKAGE_VERSION=$(node -p "require('./package.json').version")
+    - export SONAR_VERSION=${PACKAGE_VERSION}-b${TRAVIS_BUILD_ID}-${TRAVIS_BRANCH}
     - export NODE_VERSION=$(node --version)
     - export NPM_VERSION=$(npm --version)
 
@@ -54,7 +55,7 @@ jobs:
           organization: "yeutech-lab"
       script:
         - npm run test
-        - sonar-scanner
+        - sonar-scanner -Dsonar.branch=${TRAVIS_BRANCH} -Dsonar.projectVersion=${SONAR_VERSION}
 
     # Job: Release
     - stage: release
