@@ -68,7 +68,7 @@ jobs:
 
     # Job: Page
     - stage: deploy
-      if: (tag =~ ^v)
+      if: tag is present
       node_js:
         - 'lts/*'
       script:
