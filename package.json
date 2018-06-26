@@ -294,6 +294,10 @@
             "label": "CJS folder"
           }
         ]
+      },
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx -p rollup-umd-scripts scripts-ci transitive publish ${nextRelease.version}"
       }
     ]
   },
