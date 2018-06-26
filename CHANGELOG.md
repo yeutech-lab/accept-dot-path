@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.2...v1.0.3) (2018-06-26)
+
+
+### Bug Fixes
+
+* **sonarcloud:** reduce command sonar-scanner ([bba6fe9](https://github.com/yeutech-lab/accept-dot-path/commit/bba6fe9))
+* **sonarcloud:** reduce command sonar-scanner ([a526eda](https://github.com/yeutech-lab/accept-dot-path/commit/a526eda))
+
 ## [1.0.2](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.1...v1.0.2) (2018-06-26)
 
 
