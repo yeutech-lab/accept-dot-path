@@ -19,6 +19,7 @@ before_install:
     - export SONAR_VERSION=${PACKAGE_VERSION}-b${TRAVIS_BUILD_ID}-${TRAVIS_BRANCH}
     - export NODE_VERSION=$(node --version)
     - export NPM_VERSION=$(npm --version)
+    - echo $SONAR_VERSION
 
     # logging
     - npm --version || echo npm not installed
