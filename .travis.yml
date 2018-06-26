@@ -29,7 +29,7 @@ stages:
   - build
   - test
   - release
-  - deploy
+  # - deploy
 
 jobs:
   include:
@@ -50,38 +50,19 @@ jobs:
         - '8'
       addons:
         sonarcloud:
-          organization: "yeutech-lab"
+          organization: $(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $1}')
       script:
         - npm run test
-        # - sonar-scanner -Dsonar.branch=${TRAVIS_BRANCH} -Dsonar.projectVersion=${SONAR_VERSION}
-        - sonar-scanner -Dsonar.organization=yeutech-lab
+        - sonar-scanner
 
     # Job: Release
     - stage: release
+      if: branch = master
       node_js:
         - 'lts/*'
       skip_cleanup: true
       script:
         - npx semantic-release
-
-    # Job: Page
-    - stage: deploy
-      node_js:
-        - 'lts/*'
-      script:
-        - npm install
-        # Replace variables
-        - npx rollup-umd-scripts doc variable PACKAGE_NAME=${PACKAGE_NAME}
-        - npx rollup-umd-scripts doc variable PACKAGE_PEERS="$(npx rollup-umd-scripts peer npm-install-cmd)"
-        - npx rollup-umd-scripts doc variable PACKAGE_VERSION=$(node -p "require('./package.json').version")
-        - npx rollup-umd-scripts doc variable NODE_VERSION=${NODE_VERSION}
-        - npx rollup-umd-scripts doc variable NPM_VERSION=${NPM_VERSION}
-        - npx rollup-umd-scripts doc variable CI_REPOSITORY_URL="https://github.com/${TRAVIS_REPO_SLUG}.git"
-        - npx rollup-umd-scripts doc variable CI_PROJECT_URL="https://github.com/${TRAVIS_REPO_SLUG}.git"
-        - npx rollup-umd-scripts doc variable CI_PROJECT_NAMESPACE=$(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $1}')
-        - npx rollup-umd-scripts doc variable CI_PROJECT_NAME=$(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $2}')
-        - npx rollup-umd-scripts doc variable IMG_SHIELD_PUBLISHING=$(npx rollup-umd-scripts publish status --badge)
-        - npm run styleguide:build
       deploy:
         - provider: pages
           skip_cleanup: true
@@ -90,3 +71,31 @@ jobs:
           local_dir: public/
           on:
             tags: true
+
+    # # Job: Page
+    # - stage: deploy
+    #   if: branch = master
+    #   node_js:
+    #     - 'lts/*'
+    #   script:
+    #     - npm install
+    #     # Replace variables
+    #     - npx rollup-umd-scripts doc variable PACKAGE_NAME=${PACKAGE_NAME}
+    #     - npx rollup-umd-scripts doc variable PACKAGE_PEERS="$(npx rollup-umd-scripts peer npm-install-cmd)"
+    #     - npx rollup-umd-scripts doc variable PACKAGE_VERSION=$(node -p "require('./package.json').version")
+    #     - npx rollup-umd-scripts doc variable NODE_VERSION=${NODE_VERSION}
+    #     - npx rollup-umd-scripts doc variable NPM_VERSION=${NPM_VERSION}
+    #     - npx rollup-umd-scripts doc variable CI_REPOSITORY_URL="https://github.com/${TRAVIS_REPO_SLUG}.git"
+    #     - npx rollup-umd-scripts doc variable CI_PROJECT_URL="https://github.com/${TRAVIS_REPO_SLUG}.git"
+    #     - npx rollup-umd-scripts doc variable CI_PROJECT_NAMESPACE=$(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $1}')
+    #     - npx rollup-umd-scripts doc variable CI_PROJECT_NAME=$(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $2}')
+    #     - npx rollup-umd-scripts doc variable IMG_SHIELD_PUBLISHING=$(npx rollup-umd-scripts publish status --badge)
+    #     - npm run styleguide:build
+    #   deploy:
+    #     - provider: pages
+    #       skip_cleanup: true
+    #       github_token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
+    #       keep_history: true
+    #       local_dir: public/
+    #       on:
+    #         tags: true
