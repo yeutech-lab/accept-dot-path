@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.6...v1.0.7) (2018-06-26)
+
+
+### Bug Fixes
+
+* **pages:** fix pages build and added badges sonar to introduction.md ([dd96f58](https://github.com/yeutech-lab/accept-dot-path/commit/dd96f58))
+
 ## [1.0.6](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.5...v1.0.6) (2018-06-26)
 
 
