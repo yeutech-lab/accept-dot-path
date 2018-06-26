@@ -48,8 +48,12 @@ jobs:
         - 'lts/*'
         - '10'
         - '8'
+      addons:
+        sonarcloud:
+          organization: $(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $1}')
       script:
         - npm run test
+        # - sonar-scanner -Dsonar.branch=${TRAVIS_BRANCH} -Dsonar.projectVersion=${SONAR_VERSION}
         - sonar-scanner
 
     # Job: Release
