@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.4...v1.0.5) (2018-06-26)
+
+
+### Bug Fixes
+
+* **doc:** build doc was broken ([e4d721d](https://github.com/yeutech-lab/accept-dot-path/commit/e4d721d))
+* **travis:** not forcing on build tag ([e182ce3](https://github.com/yeutech-lab/accept-dot-path/commit/e182ce3))
+
 ## [1.0.4](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.3...v1.0.4) (2018-06-26)
 
 
