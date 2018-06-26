@@ -53,7 +53,7 @@ jobs:
           organization: "yeutech-lab"
       script:
         - npm run test
-        - sonar-scanner -Dsonar.projectKey=com.github.yeutech-lab.accept-dot-path -Dsonar.branch=${TRAVIS_BRANCH} -Dsonar.projectVersion=${SONAR_VERSION}
+        - sonar-scanner -Dsonar.projectKey=com.github.yeutech-lab.accept-dot-path -Dsonar.branch=${TRAVIS_BRANCH} -Dsonar.projectVersion=${SONAR_VERSION} -Dsonar.login=${SONAR_TOKEN}
         # - sonar-scanner -Dsonar.projectKey=com.github.yeutech-lab.accept-dot-path -Dsonar.organization=yeutech-lab -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}
 
     # Job: Release
