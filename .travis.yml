@@ -68,19 +68,16 @@ jobs:
 
     # Job: Page
     - stage: deploy
-      if: branch = master
+      if: (tag =~ ^v)
       node_js:
         - 'lts/*'
       script:
-        - git fetch --tags
-        - PACKAGE_VERSION=$(git describe --tags | awk -F '-' '{print $1}')
-        - git checkout refs/tags/${PACKAGE_VERSION}
-        - PACKAGE_VERSION=$(node -p "require('./package.json').version")
+        - git checkout refs/tags/${TRAVIS_TAG}
         - npm install
         # Replace variables
         - npx rollup-umd-scripts doc variable PACKAGE_NAME=${PACKAGE_NAME}
         - npx rollup-umd-scripts doc variable PACKAGE_PEERS="$(npx rollup-umd-scripts peer npm-install-cmd)"
-        - npx rollup-umd-scripts doc variable PACKAGE_VERSION=${PACKAGE_VERSION}
+        - npx rollup-umd-scripts doc variable PACKAGE_VERSION=$(node -p "require('./package.json').version")
         - npx rollup-umd-scripts doc variable NODE_VERSION=${NODE_VERSION}
         - npx rollup-umd-scripts doc variable NPM_VERSION=${NPM_VERSION}
         - npx rollup-umd-scripts doc variable CI_REPOSITORY_URL="https://github.com/${TRAVIS_REPO_SLUG}.git"
@@ -95,3 +92,5 @@ jobs:
           github_token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
           keep_history: true
           local_dir: public/
+          on:
+            tags: true
