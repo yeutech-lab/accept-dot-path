@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-version=$1
-if [[ $version ]]; then
-  echo "Building documentation for tag $version"
-  git checkout refs/tags/$1
-fi
-
-npm install
 npx rollup-umd-scripts doc variable \
   PACKAGE_NAME=${PACKAGE_NAME} \
   PACKAGE_PEERS="$(npx rollup-umd-scripts peer npm-install-cmd)" \
@@ -21,4 +14,3 @@ npx rollup-umd-scripts doc variable \
 
 npx rollup-umd-scripts doc add-section -n 'Code of conduct' -a 'FAQ' -c 'CODE_OF_CONDUCT.md' -f
 npx rollup-umd-scripts doc add-section -n 'Changelog' -a 'Code of conduct' -c 'CHANGELOG.md' -f
-npm run styleguide:build

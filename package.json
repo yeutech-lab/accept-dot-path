@@ -294,10 +294,6 @@
             "label": "CJS folder"
           }
         ]
-      },
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "./styleguide/prepare.sh ${nextRelease.version}"
       }
     ]
   },
