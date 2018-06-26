@@ -1,15 +1,22 @@
 # accept-dot-path
 
 [![Build Status](https://travis-ci.org/yeutech-lab/accept-dot-path.svg?branch=master)](https://travis-ci.org/yeutech-lab/accept-dot-path) [![npm Version](https://img.shields.io/npm/v/@yeutech-lab/accept-dot-path.svg?style=flat)](https://www.npmjs.com/package/@yeutech-lab/accept-dot-path) [![License](https://img.shields.io/npm/l/@yeutech-lab/accept-dot-path.svg?style=flat)](https://www.npmjs.com/package/@yeutech-lab/accept-dot-path) [![NPM monthly downloads](https://img.shields.io/npm/dm/@yeutech-lab/accept-dot-path.svg?style=flat)](https://npmjs.org/package/@yeutech-lab/accept-dot-path) [![NPM total downloads](https://img.shields.io/npm/dt/@yeutech-lab/accept-dot-path.svg?style=flat)](https://npmjs.org/package/@yeutech-lab/accept-dot-path) [![npm Version](https://img.shields.io/node/v/@yeutech-lab/accept-dot-path.svg?style=flat)](https://www.npmjs.com/package/@yeutech-lab/accept-dot-path) [![Module formats](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat)](https://www.npmjs.com/package/@yeutech-lab/accept-dot-path)
-[![Comments (%)](https://sonarcloud.io/api/badges/measure?key=com.github.yeutech-lab.accept-dot-path&metric=comment_lines_density)](https://sonarcloud.io/component_measures?id=com.github.yeutech-lab.accept-dot-path&metric=comment_lines_density)
-[![Open issues](https://sonarcloud.io/api/badges/measure?key=com.github.yeutech-lab.accept-dot-path&metric=open_issues)](https://sonarcloud.io/component_measures?id=com.github.yeutech-lab.accept-dot-path&metric=open_issues)
-[![Code smells](https://sonarcloud.io/api/badges/measure?key=com.github.yeutech-lab.accept-dot-path&metric=code_smells)](https://sonarcloud.io/component_measures?id=com.github.yeutech-lab.accept-dot-path&metric=code_smells)
-[![Technical debt](https://sonarcloud.io/api/badges/measure?key=com.github.yeutech-lab.accept-dot-path&metric=sqale_index)](https://sonarcloud.io/component_measures?id=com.github.yeutech-lab.accept-dot-path&metric=sqale_index)
-[![Bugs](https://sonarcloud.io/api/badges/measure?key=com.github.yeutech-lab.accept-dot-path&metric=bugs)](https://sonarcloud.io/component_measures?id=com.github.yeutech-lab.accept-dot-path&metric=bugs)
-[![Reliability remediation effort](https://sonarcloud.io/api/badges/measure?key=com.github.yeutech-lab.accept-dot-path&metric=reliability_remediation_effort)](https://sonarcloud.io/component_measures?id=com.github.yeutech-lab.accept-dot-path&metric=reliability_remediation_effort)
-[![Coverage](https://sonarcloud.io/api/badges/measure?key=com.github.yeutech-lab.accept-dot-path&metric=coverage)](https://sonarcloud.io/component_measures?id=com.github.yeutech-lab.accept-dot-path&metric=coverage)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=bugs)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=bugs)
+[![Code smells](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=code_smells)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=code_smells)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=coverage)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=coverage)
+[![Duplicate lines (%)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=duplicated_lines_density)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=duplicated_lines_density)
+[![Lines of code](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=ncloc)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=ncloc)
+[![Maintainability rating](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=sqale_rating)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=sqale_rating)
+[![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=alert_status)
+[![Reliability rating](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=reliability_rating)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=reliability_rating)
+[![Security rating](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=security_rating)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=security_rating)
+[![Technical debt](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=sqale_index)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=sqale_index)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=vulnerabilities)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=vulnerabilities)
 
 accept-dot-path is a simple function that accept all path starting with dot(s).
+
+
+https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=duplicated_lines_density
 
 ## Table of Contents
 
