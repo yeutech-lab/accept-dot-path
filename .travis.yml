@@ -44,7 +44,6 @@ jobs:
         - npm run build
     # Job: Test
     - stage: test
-      if: branch IN (dev, master)
       node_js:
         - 'lts/*'
         - '10'
@@ -59,7 +58,6 @@ jobs:
 
     # Job: Release
     - stage: release
-      if: branch = master
       node_js:
         - 'lts/*'
       skip_cleanup: true
@@ -68,11 +66,9 @@ jobs:
 
     # Job: Page
     - stage: deploy
-      if: tag is present
       node_js:
         - 'lts/*'
       script:
-        - git checkout refs/tags/${TRAVIS_TAG}
         - npm install
         # Replace variables
         - npx rollup-umd-scripts doc variable PACKAGE_NAME=${PACKAGE_NAME}
