@@ -54,7 +54,7 @@ jobs:
           organization: "yeutech-lab"
       script:
         - npm run test
-        - sonnar-scanner
+        - sonar-scanner
 
     # Job: Release
     - stage: release
