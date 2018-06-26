@@ -49,8 +49,12 @@ jobs:
         - lts/*
         - 10
         - 8
+      addons:
+        sonarcloud:
+          organization: "yeutech-lab"
       script:
         - npm run test
+        - sonnar-scanner
 
     # Job: Release
     - stage: release
