@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.3...v1.0.4) (2018-06-26)
+
+
+### Bug Fixes
+
+* **doc:** build doc was broken ([babe53f](https://github.com/yeutech-lab/accept-dot-path/commit/babe53f))
+* **sonar:** simplify sonar cmd ([aef373d](https://github.com/yeutech-lab/accept-dot-path/commit/aef373d))
+* **sonar:** simplify sonar cmd ([7a3e12c](https://github.com/yeutech-lab/accept-dot-path/commit/7a3e12c))
+
 ## [1.0.3](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.2...v1.0.3) (2018-06-26)
 
 
