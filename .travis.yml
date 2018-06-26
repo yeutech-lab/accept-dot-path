@@ -68,10 +68,11 @@ jobs:
 
     # Job: Page
     - stage: deploy
-      if: tag is present
+      if: ((tag =~ ^v) AND (branch = master))
       node_js:
         - 'lts/*'
       script:
+        - echo "preparing doc for tags ${TRAVIS_TAG}"
         - git checkout refs/tags/${TRAVIS_TAG}
         - npm install
         # Replace variables
@@ -92,5 +93,3 @@ jobs:
           github_token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
           keep_history: true
           local_dir: public/
-          on:
-            tags: true
