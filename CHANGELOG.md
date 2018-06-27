@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.9...v1.0.10) (2018-06-27)
+
+
+### Bug Fixes
+
+* **doc:** repair prepare.sh ([677b9be](https://github.com/yeutech-lab/accept-dot-path/commit/677b9be))
+
 ## [1.0.9](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.8...v1.0.9) (2018-06-27)
 
 
