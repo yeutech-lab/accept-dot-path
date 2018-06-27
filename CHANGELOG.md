@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.7...v1.0.8) (2018-06-27)
+
+
+### Bug Fixes
+
+* **tag:** using latest tag for doc ([0c23ac0](https://github.com/yeutech-lab/accept-dot-path/commit/0c23ac0))
+
 ## [1.0.7](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.6...v1.0.7) (2018-06-26)
 
 
