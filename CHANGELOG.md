@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.8...v1.0.9) (2018-06-27)
+
+
+### Bug Fixes
+
+* **intro:** fix introduction ([c3f6717](https://github.com/yeutech-lab/accept-dot-path/commit/c3f6717))
+
 ## [1.0.8](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.7...v1.0.8) (2018-06-27)
 
 
