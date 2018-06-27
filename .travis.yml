@@ -71,7 +71,7 @@ jobs:
         - 'lts/*'
       script:
         - git fetch --tags
-        - git checkout refs/tags/$(git describe --tags | awk -F '-' '{print $1}')
+        - git checkout refs/tags/$(git describe --tags `git rev-list --tags --max-count=1`)
         - npm install
         - styleguide/prepare.sh
         - npm run styleguide:build
