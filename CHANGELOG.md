@@ -1,3 +1,18 @@
+# [1.1.0](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.11...v1.1.0) (2018-12-16)
+
+
+### Bug Fixes
+
+* **rollup:** activate runtimeHelpers ([0e77ddd](https://github.com/yeutech-lab/accept-dot-path/commit/0e77ddd))
+* **rollup:** fix rollup having wrong configuration ([0a1cfc3](https://github.com/yeutech-lab/accept-dot-path/commit/0a1cfc3))
+* **travis:** fix travis triggering on pull wrong jobs ([31d86d8](https://github.com/yeutech-lab/accept-dot-path/commit/31d86d8))
+
+
+### Features
+
+* **greekeeper:** added greenkeeper and upgrade all dependencies ([d055aff](https://github.com/yeutech-lab/accept-dot-path/commit/d055aff))
+* **greenkeeper:** added greenkeeper ([9ab1534](https://github.com/yeutech-lab/accept-dot-path/commit/9ab1534))
+
 ## [1.0.11](https://github.com/yeutech-lab/accept-dot-path/compare/v1.0.10...v1.0.11) (2018-06-27)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@yeutech-lab/accept-dot-path",
-  "version": "1.0.11",
+  "version": "1.1.0",
   "description": "accept-dot-path is a simple function that accept all path starting with dot(s).",
   "main": "lib/index.js",
   "jsnext:main": "dist/accept-dot-path.esm.js",
