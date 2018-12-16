@@ -70,6 +70,7 @@ const plugins = [
   json(),
   babel({
     babelrc: false,
+    runtimeHelpers: true,
     exclude: 'node_modules/**',
   }),
   cleanup(),
