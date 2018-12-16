@@ -8,6 +8,8 @@ tmp.json
 .git-credentials
 /.idea
 /.babelrc
+/babel.config.js
+/babel.ext.json
 .gitlab-ci.yml
 .travis-ci.yml
 /.eslintignore

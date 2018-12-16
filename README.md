@@ -11,7 +11,7 @@
 [![Reliability rating](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=reliability_rating)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=reliability_rating)
 [![Security rating](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=security_rating)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=security_rating)
 [![Technical debt](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=sqale_index)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=sqale_index)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=vulnerabilities)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=vulnerabilities)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=vulnerabilities)](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.accept-dot-path&metric=vulnerabilities) [![Greenkeeper badge](https://badges.greenkeeper.io/yeutech-lab/accept-dot-path.svg)](https://greenkeeper.io/)
 
 accept-dot-path is a simple function that accept all path starting with dot(s).
 
