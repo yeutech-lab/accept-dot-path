@@ -182,7 +182,7 @@
     "@semantic-release/changelog": "^3.0.1",
     "@semantic-release/exec": "^3.3.1",
     "@semantic-release/git": "^7.0.5",
-    "@semantic-release/github": "^5.2.6",
+    "@semantic-release/github": "^6.0.0",
     "@semantic-release/npm": "^5.1.2",
     "@yeutech-lab/documentation": "^1.0.8",
     "babel-core": "^7.0.0-bridge.0",
